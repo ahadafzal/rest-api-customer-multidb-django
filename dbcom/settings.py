@@ -140,8 +140,8 @@ STATIC_ROOT = BASE_DIR / 'staticfiles'
 STATIC_URL = '/static/'
 
 # Extra places for collectstatic to find static files.
-STATICFILES_DIRS = (
-    BASE_DIR / 'staticfiles',
-)
+# STATICFILES_DIRS = (
+#     BASE_DIR / 'staticfiles',
+# )
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'

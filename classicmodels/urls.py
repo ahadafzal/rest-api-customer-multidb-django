@@ -11,6 +11,9 @@ from . import views
 
 router = routers.DefaultRouter()
 router.register(r'customers', views.CustomerViewSet)
+router.register(r'employees', views.EmployeeViewSet)
+router.register(r'orders', views.OrderViewSet)
+
 
 # Wire up our API using automatic URL routing.
 # Additionally, we include login URLs for the browsable API.

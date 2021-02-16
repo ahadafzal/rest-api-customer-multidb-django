@@ -78,7 +78,8 @@ class Orders(models.Model):
     shippeddate = models.TextField(db_column='shippedDate', blank=True, null=True)  # Field name made lowercase. This field type is a guess.
     status = models.TextField(blank=True, null=True)  # This field type is a guess.
     comments = models.TextField(blank=True, null=True)  # This field type is a guess.
-    customernumber = models.TextField(db_column='customerNumber', blank=True, null=True)  # Field name made lowercase. This field type is a guess.
+    # customernumber = models.TextField(db_column='customerNumber')  # Field name made lowercase. This field type is a guess.
+    customernumber = models.ForeignKey(Customers, on_delete=models.CASCADE, db_column='customerNumber')
 
     class Meta:
         managed = False
